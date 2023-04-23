@@ -1,0 +1,32 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 78vh;
+    background-color: #ffffff;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: #f1356d;
+}
+
+p {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: gray;
+}
+  
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+}
+
+p:last-child {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(75, 66, 66);
+  }
