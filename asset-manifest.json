@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/pizza-planet/static/css/main.23680c71.css",
+    "main.js": "/pizza-planet/static/js/main.bbe810ee.js",
+    "static/js/787.ac671339.chunk.js": "/pizza-planet/static/js/787.ac671339.chunk.js",
+    "static/media/PizzaPlanetLogo.png": "/pizza-planet/static/media/PizzaPlanetLogo.f64e428ef8a9b33307ac.png",
+    "static/media/HomePage.jpg": "/pizza-planet/static/media/HomePage.aaea0318f6508a0ef58a.jpg",
+    "index.html": "/pizza-planet/index.html",
+    "main.23680c71.css.map": "/pizza-planet/static/css/main.23680c71.css.map",
+    "main.bbe810ee.js.map": "/pizza-planet/static/js/main.bbe810ee.js.map",
+    "787.ac671339.chunk.js.map": "/pizza-planet/static/js/787.ac671339.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.23680c71.css",
+    "static/js/main.bbe810ee.js"
+  ]
+}
