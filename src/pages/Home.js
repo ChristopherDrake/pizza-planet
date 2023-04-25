@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 function HomePage() {
@@ -15,15 +16,14 @@ function HomePage() {
             Kindly use the navigation menu at the top.
         </div>
           <br />
-          <a href="/about-us">
+          <Link to="/about-us">
             <button className="btn btn-primary">
               <span className="btn-text">About Us!</span>
             </button>
-          </a>
+          </Link>
         </div>
       </div>
   );
 }
 
 export default HomePage;
-
