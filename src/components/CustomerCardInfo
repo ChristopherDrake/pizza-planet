@@ -1,0 +1,8 @@
+def save_credit_card_info(name, card_number, expiration_date, cvv):
+    # create a dictionary to store the customer's information
+    customer_info = {"Name": name, "Card Number": card_number, "Expiration Date": expiration_date, "CVV": cvv}
+    
+    # open a file in write mode to save the customer's information
+    with open("customer_info.txt", "a") as file:
+        # write the customer's information to the file
+        file.write(str(customer_info) + "\n")
