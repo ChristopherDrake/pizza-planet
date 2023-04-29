@@ -1,4 +1,5 @@
-import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 function Cart(props) {
   const { cartItems, setCartItems } = props;
@@ -9,8 +10,26 @@ function Cart(props) {
     );
   };
 
+  const handleIncreaseItemCount = (product) => {
+    setCartItems((prevCartItems) => {
+      return prevCartItems.map((item) =>
+        item.id === product.id ? { ...item, count: item.count + 1 } : item
+      );
+    });
+  };
+
+  const handleDecreaseItemCount = (product) => {
+    setCartItems((prevCartItems) => {
+      return prevCartItems.map((item) =>
+        item.id === product.id && item.count > 1
+          ? { ...item, count: item.count - 1 }
+          : item
+      );
+    });
+  };
+
   const getTotalPrice = () => {
-    return cartItems.reduce((total, item) => total + item.price, 0);
+    return cartItems.reduce((total, item) => total + item.price * item.count, 0);
   };
 
   return (
@@ -18,8 +37,12 @@ function Cart(props) {
       <ul>
         {cartItems.map((item) => (
           <li key={item.id}>
-            {item.name} - ${item.price / 100}
-            <button onClick={() => handleRemoveFromCart(item)}>Remove</button>
+            {item.name} - ${item.price / 100} x {item.count}
+            <button onClick={() => handleDecreaseItemCount(item)}>-</button>
+            <button onClick={() => handleIncreaseItemCount(item)}>+</button>
+            <button onClick={() => handleRemoveFromCart(item)}>
+              <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
+            </button>
           </li>
         ))}
       </ul>

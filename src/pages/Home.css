@@ -6,7 +6,6 @@ body{
   margin: 0;
 }
 .wrapper {
-  display: grid;
   place-content: center;
   min-height: 100vh;
   font-family: "Oswald", sans-serif;
@@ -15,9 +14,9 @@ body{
   text-transform: uppercase;
   color: var(--text-color);
   position: relative;
-  background-image:url('../../public/images/HomePage.jpg');  ;
+  background-image:url('../../public/images/HomePage.jpg');
+  display: grid;
 }
-
 .content {
   margin: auto;
   padding: 5% 15% 15% 15%;
@@ -40,7 +39,6 @@ body{
   transform: translateY(2%)
   
 }
-
 .btn {
   display: inline-block;
   background-color: #f03232;
@@ -62,4 +60,7 @@ body{
 .btn-text {
   font-size: 24px;
   color: rgb(229, 241, 59);
+}
+.nav-link {
+  text-decoration: none;
 }

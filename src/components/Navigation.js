@@ -1,9 +1,22 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
+import { auth } from '../services/firebase';
 import './Navigation.css';
 import logo from '../images/PizzaPlanetLogo.png';
 
 function NavigationBar() {
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setLoggedIn(user ? true : false);
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+
   return (
     <nav className="navbar">
       <Link to="/" className="navbar-logo-link">
@@ -33,6 +46,25 @@ function NavigationBar() {
         <li className="nav-item">
           <Link to="/about-us" className="nav-link">
             About Us
+          </Link>
+        </li>
+        {!loggedIn && (
+        <>
+          <li className="nav-item">
+            <Link to="/login" className="nav-link">
+              Log In
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/sign-up" className="nav-link">
+              Sign Up
+            </Link>
+          </li>
+        </>
+      )}
+        <li>
+          <Link to="/account" className="nav-link">
+            Account
           </Link>
         </li>
       </ul>
