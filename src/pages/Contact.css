@@ -1,10 +1,3 @@
-
-####### h1 {
-  font-size: 4rem;
-  margin-bottom: 2rem;
-  color: #f1356d;
-}             /*not currently using this header, can be cleaned up*/
-
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -54,7 +47,7 @@ button[type='submit']:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-left: 0px; /* center the container horizontally */
+  margin-left: 0px;
 }
 
 .contact-container {

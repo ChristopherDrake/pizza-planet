@@ -6,8 +6,12 @@ import MenuPage from './pages/Menu';
 import ContactUsPage from './pages/Contact';
 import FAQPage from './pages/FAQ';
 import AboutUsPage from './pages/About';
+import SignUpPage from './pages/SignUp';
+import LoginPage from './pages/Login';
+import AccountPage from './pages/Account';
 import basename from './services/basename';
 import './App.css';
+
 
 function App() {
   return (
@@ -20,6 +24,9 @@ function App() {
           <Route path="/contact-us" element={<ContactUsPage />} />
           <Route path="/FAQ" element={<FAQPage />} />
           <Route path="/about-us" element={<AboutUsPage />} />
+          <Route path="/sign-up" element={<SignUpPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/account" element={<AccountPage />} />
         </Routes>
       </div>
     </BrowserRouter>
