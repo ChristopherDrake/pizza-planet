@@ -1,11 +1,13 @@
 import React from 'react';
 import './Contact.css'
-
+import instagramIcon from '../images/Instagram.jpg';
+import facebookIcon from '../images/Facebook.jpg';
+import twitterIcon from '../images/Twitter.jpg';
 
 const ContactUsPage = () => {
   return (
-    <div class="container">
-      <div class="contact-container">
+    <div className="container">
+      <div className="contact-container">
       <h2>Address</h2>
       <p>123 Main St<br />Denver, CO 80202</p>
       <form className="contact-form">
@@ -26,9 +28,9 @@ const ContactUsPage = () => {
       </div>
     
       <div className="contact-social-container">
-        <img src="/images/Instagram.jpg" alt="Instagram"/>
-        <img src="/images/Facebook.jpg" alt="Facebook"/>
-        <img src="/images/Twitter.jpg" alt="Twitter"/>
+        <img src={instagramIcon} alt="Instagram"/>
+        <img src={facebookIcon} alt="Facebook"/>
+        <img src={twitterIcon} alt="Twitter"/>
       </div>
     </div>
   );
