@@ -18,9 +18,9 @@ function CheckoutForm({ cartItems }) {
 
     const createPaymentIntent = firebase.functions().httpsCallable('createPaymentIntent');
     const paymentIntentData = {
-      items: cartItems,
-      // Add any additional data if necessary
-    };
+        amount: cartItems.reduce((total, item) => total + item.price * item.quantity, 0),
+      };
+      
 
     try {
       const { data: clientSecret } = await createPaymentIntent(paymentIntentData);
