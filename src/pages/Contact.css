@@ -58,26 +58,40 @@ button[type='submit']:hover {
     max-width: 1000px;
     height: 1000px;
     background-color: #ffffff;
-  }
+}
+
 .contact-text-container {
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     margin-left: 40px;
-  }
-  .contact-text-container h3 {
-    display:flex;
+}
+
+.contact-text-container h3 {
+    display: flex;
     flex-direction: column;
     font-size: 3rem;
     color: #f1356d;
-  }
-  
-  .contact-text-container p {
+}
+
+.contact-text-container p {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
     color: #333;
-  }
+}
+
+.contact-social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.contact-social-container img {
+  width: 50px;
+  margin: 0 1rem;
+}

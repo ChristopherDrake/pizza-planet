@@ -25,11 +25,11 @@ const ContactUsPage = () => {
          Please fill out the form and we'll get back to you as soon as possible.</p>
       </div>
     
-       <div className="contact-social-container">
-      <img src="../images/Instagram icon.jpg"/>
-      <img src="../images/Facebook icon.jpg"/>
-      <img src="../images/Twitter ican.jpg"/>
-    </div>
+      <div className="contact-social-container">
+        <img src="/images/Instagram.jpg" alt="Instagram"/>
+        <img src="/images/Facebook.jpg" alt="Facebook"/>
+        <img src="/images/Twitter.jpg" alt="Twitter"/>
+      </div>
     </div>
   );
 };
