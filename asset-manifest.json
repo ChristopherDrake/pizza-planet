@@ -1,26 +1,36 @@
 {
   "files": {
-    "main.css": "/pizza-planet/static/css/main.25ea8ac4.css",
-    "main.js": "/pizza-planet/static/js/main.976b1e5e.js",
+    "main.css": "/pizza-planet/static/css/main.ae470ff1.css",
+    "main.js": "/pizza-planet/static/js/main.fb10ba3f.js",
     "static/js/787.ac671339.chunk.js": "/pizza-planet/static/js/787.ac671339.chunk.js",
     "static/media/pepperoni.jpg": "/pizza-planet/static/media/pepperoni.f4b1e49e94398b67e36d.jpg",
     "static/media/PizzaPlanetLogo.png": "/pizza-planet/static/media/PizzaPlanetLogo.f64e428ef8a9b33307ac.png",
     "static/media/margherita.jpg": "/pizza-planet/static/media/margherita.8a6966f61c969803498d.jpg",
-    "static/media/HomePage.jpg": "/pizza-planet/static/media/HomePage.aaea0318f6508a0ef58a.jpg",
+    "static/media/pesto.jpg": "/pizza-planet/static/media/pesto.5b8a4677b9e54860f67f.jpg",
     "static/media/hawaiian.jpg": "/pizza-planet/static/media/hawaiian.9b163ec78c0e509b9c58.jpg",
+    "static/media/chicken_bacon_ranch.jpg": "/pizza-planet/static/media/chicken_bacon_ranch.d0578bd2afa8fed5e909.jpg",
     "static/media/Facebook.jpg": "/pizza-planet/static/media/Facebook.1c1ec21df1426fa4e498.jpg",
     "static/media/Instagram.jpg": "/pizza-planet/static/media/Instagram.388c524ff131abd5dcbd.jpg",
     "static/media/Twitter.jpg": "/pizza-planet/static/media/Twitter.0f99666feeb040202381.jpg",
+    "static/media/bbq_chicken.jpg": "/pizza-planet/static/media/bbq_chicken.f2de0d334d7723ca4d62.jpg",
     "static/media/mozzarella.jpg": "/pizza-planet/static/media/mozzarella.3cf87f6cab24afbc1de5.jpg",
     "static/media/wings.jpg": "/pizza-planet/static/media/wings.5a1728c9a33443c4c3b7.jpg",
+    "static/media/meatball_pasta.jpg": "/pizza-planet/static/media/meatball_pasta.a3a86cf79b88b69da3b0.jpg",
+    "static/media/spinach_artichoke.jpg": "/pizza-planet/static/media/spinach_artichoke.36f5c14d58222e2dd73d.jpg",
     "static/media/soda.jpg": "/pizza-planet/static/media/soda.d77c46f71dfbe2a9097a.jpg",
+    "static/media/chicken_parmesan.jpg": "/pizza-planet/static/media/chicken_parmesan.eb278c57f0092fb3da80.jpg",
+    "static/media/vegetarian.jpg": "/pizza-planet/static/media/vegetarian.df545f87178ea8f3614d.jpg",
+    "static/media/meat_lovers.jpg": "/pizza-planet/static/media/meat_lovers.4758bf43d7c11862dce4.jpg",
+    "static/media/chicken_tenders.jpg": "/pizza-planet/static/media/chicken_tenders.d891a9b6953b7aec1c47.jpg",
+    "static/media/chicken_bacon_ranch_pasta.jpg": "/pizza-planet/static/media/chicken_bacon_ranch_pasta.5c32a6a7205efa18b46c.jpg",
+    "static/media/chicken_alfredo.jpg": "/pizza-planet/static/media/chicken_alfredo.f0d87d2d6b2932e87742.jpg",
     "index.html": "/pizza-planet/index.html",
-    "main.25ea8ac4.css.map": "/pizza-planet/static/css/main.25ea8ac4.css.map",
-    "main.976b1e5e.js.map": "/pizza-planet/static/js/main.976b1e5e.js.map",
+    "main.ae470ff1.css.map": "/pizza-planet/static/css/main.ae470ff1.css.map",
+    "main.fb10ba3f.js.map": "/pizza-planet/static/js/main.fb10ba3f.js.map",
     "787.ac671339.chunk.js.map": "/pizza-planet/static/js/787.ac671339.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.25ea8ac4.css",
-    "static/js/main.976b1e5e.js"
+    "static/css/main.ae470ff1.css",
+    "static/js/main.fb10ba3f.js"
   ]
 }
