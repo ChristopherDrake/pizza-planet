@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 function Cart(props) {
   const { cartItems, setCartItems } = props;
@@ -46,7 +47,11 @@ function Cart(props) {
           </li>
         ))}
       </ul>
-      <h3>Total: ${getTotalPrice() / 100}</h3>
+      <h3>Subtotal: ${getTotalPrice() / 100}</h3>
+      {/* Button with link to Checkout page */}
+      <Link to="/checkout">
+        <button>Checkout</button>
+      </Link>
     </div>
   );
 }

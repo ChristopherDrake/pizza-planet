@@ -1,11 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import { Link } from 'react-router-dom';
 import { auth } from '../services/firebase';
 import './Navigation.css';
 import logo from '../images/PizzaPlanetLogo.png';
+import { CartContext } from '../services/CartContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 function NavigationBar() {
   const [loggedIn, setLoggedIn] = useState(false);
+  const { totalItems } = useContext(CartContext);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -65,6 +69,12 @@ function NavigationBar() {
         <li>
           <Link to="/account" className="nav-link">
             Account
+          </Link>
+        </li>
+        <li>
+          <Link to="/checkout" className="nav-link cart-link" style={{ marginLeft: "auto" }}>
+            <div className="cart-count">{totalItems}</div>
+              <FontAwesomeIcon icon={faShoppingCart} />
           </Link>
         </li>
       </ul>

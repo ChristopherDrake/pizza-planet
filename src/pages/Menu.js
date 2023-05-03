@@ -1,19 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import Items from '../components/Items.js';
 import Cart from '../components/Cart.js';
 import MenuItem from '../components/MenuItem.js';
-import CheckoutForm from '../components/Checkout.js';
-import { Elements } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
-
-
+import { CartContext} from '../services/CartContext.js';
 import './Menu.css';
 
 function MenuPage() {
-  const [cartItems, setCartItems] = useState([]);
+  const { cartItems, setCartItems } = useContext(CartContext);
 
-  const stripePromise = loadStripe("pk_test_51N2KiYDpQVHsLbUuNw2QJboOx9nR4KDyo2Vu" +
-  "bkYlucIVUYDXXoOGMLk4JnX9YpTQJlQO1GcmLkb8nTecQYQxlP7S005ytlvPSm");
 
   const handleAddToCart = (product) => {
     const existingCartItem = cartItems.find((item) => item.id === product.id);
@@ -31,25 +25,55 @@ function MenuPage() {
       ]);
     }
   };
-
+  const appetizers = Items.products.filter((product) => product.category === 'appetizer');
+  const pizzas = Items.products.filter((product) => product.category === 'pizza');
+  const pasta = Items.products.filter((product) => product.category === 'pasta');
+  const drinks = Items.products.filter((product) => product.category === 'drink');
+  // const miscellaneous = Items.products.filter(
+  //   (product) =>
+  //     product.category !== 'appetizer' &&
+  //     product.category !== 'pizza' &&
+  //     product.category !== 'pasta' &&
+  //     product.category !== 'drink'
+  // )
+  const renderMenuItems = (items) => {
+    return items.map((product) => (
+      <MenuItem key={product.id} product={product} handleAddToCart={handleAddToCart} />
+    ));
+  };
   return (
     <div className="menu-page">
-      <div className="menu-items">
-        {Items.products.map((product) => (
-          <MenuItem
-            key={product.id}
-            product={product}
-            handleAddToCart={handleAddToCart}
-          />
-        ))}
+      <div className="menu-section">
+        <h1>Appetizers</h1>
+        <div className="menu-items">
+        {renderMenuItems(appetizers)}
+        <br/>
+        </div>
+      </div>
+      <div className="menu-section">  
+        <h1>Pizzas</h1>
+        <div className="menu-items">
+        {renderMenuItems(pizzas)}
+        <br/>
+        </div>
+      </div>
+      <div className="menu-section">
+        <h1>Pasta</h1>
+        <div className="menu-items">
+        {renderMenuItems(pasta)}
+        <br/>
+      </div>
+      </div>
+      <div className="menu-section">
+        <h1>Drinks</h1>
+        <div className="menu-items">
+        {renderMenuItems(drinks)}
+        <br/>
+        </div>
       </div>
       <div className="cart">
-        <Elements stripe={stripePromise}>
-          <Cart cartItems={cartItems} setCartItems={setCartItems} />
-          <CheckoutForm cartItems={cartItems} />
-        </Elements>
+        <Cart cartItems={cartItems} setCartItems={setCartItems} />
       </div>
-
     </div>
   );
 }

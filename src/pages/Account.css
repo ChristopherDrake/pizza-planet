@@ -20,4 +20,70 @@
   button:hover {
     background-color: #d81c5c;
   }
+
+  .account-details-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  .account-details-table th,
+  .account-details-table td {
+    padding: 10px 15px;
+    text-align: left;
+    vertical-align: middle;
+  }
+  
+  .account-details-table th {
+    font-weight: bold;
+    color: #444;
+    background: #f7f7f7;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .account-details-table td {
+    color: #555;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .account-details-table tr.divider td {
+    border-top: 1px solid #ccc;
+    border-bottom: none;
+    background: none;
+  }
+  
+  .account-details-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .account-details-table td button {
+    background: #fff;
+    border: none;
+    padding: 0;
+    margin-left: 10px;
+    color: #000;
+  }
+  
+  .account-details-table td button svg {
+    height: 1.2em;
+  }
+  
+  .account-details-table td input {
+    font-size: 18px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  .account-details-table td input::placeholder {
+    color: #ccc;
+  }
+  
+  .account-details-table td input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 3px 1px #9ecaed;
+  }
+  
   

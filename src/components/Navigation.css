@@ -1,4 +1,8 @@
 .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
     background-color: #dc1721;
     display: flex;
     align-items: center;
@@ -48,7 +52,7 @@
       width: 30px;
       height: 30px;
       margin-right: 5px;
-    }
+    }  
   
   .nav-link:hover {
     background-color: white;
@@ -72,3 +76,42 @@
     padding: 0;
     margin: 0;
   }
+  .cart-button {
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+    margin-left: 20px;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+  }
+  
+  .cart-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 100%;
+    right: 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1;
+  }
+  
+  

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { auth } from "../services/firebase";
+import { auth, db } from "../services/firebase";
 import { useNavigate } from 'react-router';
 import "./SignUp.css";
 
 function SignUpPage() {
   const [email, setEmail] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const navigate = useNavigate();
@@ -13,11 +15,16 @@ function SignUpPage() {
     e.preventDefault();
     setError(null);
     try {
-        await auth.createUserWithEmailAndPassword(email, password);
-        auth.signInWithEmailAndPassword(email, password);
-        navigate('/');
+      const userCredential = await auth.createUserWithEmailAndPassword(email, password);
+      await userCredential.user.updateProfile({
+        displayName: [firstName, lastName].join(' '),
+      });
+      await db.collection('users').doc(userCredential.user.uid).set({
+        displayName: [firstName, lastName].join(' '),
+      });
+      navigate('/');
     } catch (err) {
-    setError(err.message);
+      setError(err.message);
     }
   };
 
@@ -31,6 +38,18 @@ function SignUpPage() {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="First Name"
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Last Name"
+          value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
         />
         <input
           type="password"

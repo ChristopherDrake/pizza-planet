@@ -1,12 +1,12 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 const Stripe = require('stripe');
+const {STRIPE_SECRET_KEY} = require('./.env');
 const cors = require('cors');
 const express = require('express');
+const stripe = Stripe(STRIPE_SECRET_KEY);
 
 admin.initializeApp();
-const stripe = new Stripe('sk_test_51N2KiYDpQVHsLbUuRCYgVGWWPEmztAp8H' +
-  'Ri1gaxsU9iOS3b3t36HPNcQUOrc0R2S44hRtpNVicslxrkh7blhLlxo00CS9vVlak');
 
 const app = express();
 
@@ -25,7 +25,7 @@ app.post('/createPaymentIntent', async (req, res) => {
   }
 
   try {
-    const {amount} = req.body;
+    const { amount } = req.body;
     const paymentIntent = await stripe.paymentIntents.create({
       amount: amount,
       currency: 'usd',
